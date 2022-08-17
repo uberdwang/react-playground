@@ -7,6 +7,7 @@ export default function OveruseState() {
 
   // Whenever a state setter function is only used synchronously in an effect, get rid of the state!
   // useEffect should be used to sync your state with something outside of React, utilizing useEffect to sync two react states is rarely right
+  // what if there are two setOutputString deriving different values, need a single source of truth: setOutputString(stringify(data)), setOutputString(compute(data))
 
   const outputString = data ? stringify(data) : "";
   // const [outputString, setOutputString] = useState();
